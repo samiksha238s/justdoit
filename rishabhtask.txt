@@ -1,0 +1,3 @@
+select * from test.rishabh;
+insert into test.rishabh(id, name, salary) values(6,'frrv',0);
+select AVG(NULLIF(salary,NOT(NULLIF(id,6))))  from test.rishabh;
