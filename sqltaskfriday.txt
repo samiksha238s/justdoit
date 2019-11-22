@@ -1,0 +1,14 @@
+select * from test.score;
+insert into test.score(ID, maths, engg, gk) values(1, 10, 10, 10),(2,20,20,20),(3,30,30,30),(4,40,40,40),(5,50,50,50),(6,60,60,60),(7,70,70,70),(8,80,80,80),(9,90,90,90),(10,100,100,100);
+
+
+select * from test.student;
+insert into test.student(ID, name) values(1, 'samiksha'),(2,'sohail'),(3,'rishabh'),(4,'rashika'),(5,'sagar'),(6,'riyaz'),(7,'kritika'),(8,'yashika'),(9,'deepali'),(10,'deepali');
+
+
+
+(select student.ID, score.maths from student inner join score on student.ID = score.ID);
+select avg(maths) from score;
+
+
+select sum(maths+engg+gk) from score where ID=1;
